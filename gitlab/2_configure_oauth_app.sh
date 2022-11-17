@@ -18,7 +18,7 @@ echo '     '
 echo " Open $GITLAB_APP_URL"
 echo '     '
 echo '     '
-echo " Fil in the next values:"
+echo " Fill in the next values:"
 echo " Name:              $FORMATTED_NAMESPACE"
 echo " Redirect URI:      $CHE_SERVER_URL/api/oauth/callback"
 echo " Under Scopes, check the api, write_repository, and openid checkboxes."
