@@ -1,11 +1,16 @@
 #!/usr/bin/env bash
+#
+# Copyright (c) 2022 Red Hat, Inc.
+# This program and the accompanying materials are made
+# available under the terms of the Eclipse Public License 2.0
+# which is available at https://www.eclipse.org/legal/epl-2.0/
+#
+# SPDX-License-Identifier: EPL-2.0
+#
 
-if [[ $(kubectl get pods -n eclipse-che 2> /dev/null | wc -l) -gt 0 ]]
-then
-  NAMESPACE="eclipse-che"
-else
-  NAMESPACE="openshift-devspaces"
-fi
+source .././utils.sh
+define_namespace
+
 CONSUMER_KEY=$(cat ./certs/bitbucket_server_consumer_key)
 SHARED_SECRET=$(cat ./certs/bitbucket_shared_secret)
 PRIVATE_KEY=$(cat ./certs/privatepkcs8.pem | sed 's/-----BEGIN PRIVATE KEY-----//g' |  sed 's/-----END PRIVATE KEY-----//g' | tr -d '\n')

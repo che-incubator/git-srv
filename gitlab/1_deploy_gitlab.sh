@@ -1,4 +1,12 @@
 #!/usr/bin/env bash
+#
+# Copyright (c) 2022 Red Hat, Inc.
+# This program and the accompanying materials are made
+# available under the terms of the Eclipse Public License 2.0
+# which is available at https://www.eclipse.org/legal/epl-2.0/
+#
+# SPDX-License-Identifier: EPL-2.0
+#
 
 wait-pod-running() {
 	[[ -z $1 ]] && { echo '[ERROR] SELECTOR not defined'; exit 1; }
@@ -35,4 +43,4 @@ oc create route edge gitlab --service=gitlab-webservice-default --port=http-work
 printf "Gitlab has started, visit https://gitlab-gitlab-system.%s.\n\n" "$TRIMMED_HOSTNAME"
 
 PASSWORD="$(kubectl get secret gitlab-gitlab-initial-root-password -n gitlab-system -o jsonpath="{.data.password}" | base64 --decode)"
-printf "login: root\nPassword: %s\n\n" "$PASSWORD"
+printf "Login: root\nPassword: %s\n\n" "$PASSWORD"
