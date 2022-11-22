@@ -1,0 +1,16 @@
+. Download a GitHub server VHD image: https://enterprise.github.com/releases
+. Create a virtual-box machine with next parameters:
+ * Type: Linux
+ * Version: Ubuntu 64-bit
+ * RAM options: minimum 26 Gb
+ * Virtual Hard Disc: minimum 20 Gb
+. Go to the settings page of the created virtual machine:
+ * Go to the Storage tab
+ ** Change the predefined hard disc to SATA port 1
+ ** Add the downloaded GitHub VHD as SATA port 0
+ ** Add the downloaded GitHub VHD as SATA port 0
+ * Go to the Network tab.
+ ** Select Bridged adapter with your fiscal network device
+. Start the virtual machine and wait until it loads.
+. See the GitHub IP and expose it to the public internet.
+. Continue the setup in a browser.
