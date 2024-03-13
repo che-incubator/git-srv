@@ -45,7 +45,7 @@ resources: {}
 
 persistence:
   enabled: true
-  storageClassName: gp2
+  storageClassName: gp2-csi
   accessModes:
      - ReadWriteOnce
   size: 20Gi
