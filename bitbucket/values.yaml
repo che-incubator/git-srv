@@ -7,8 +7,8 @@ namespace: bitbucket
 replicaCount: 1
 proxyName: ""
 image:
-  repository: atlassian/bitbucket-server
-  tag: 8.7.1
+  repository: atlassian/bitbucket
+  tag: 8.19.14
   pullPolicy: IfNotPresent
 
 nameOverride: ""
