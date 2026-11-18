@@ -8,7 +8,7 @@ replicaCount: 1
 proxyName: ""
 image:
   repository: atlassian/bitbucket
-  tag: 8.19.14
+  tag: 9.4.7
   pullPolicy: IfNotPresent
 
 nameOverride: ""
